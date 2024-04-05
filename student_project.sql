@@ -42,6 +42,8 @@ CREATE TABLE jc_register_office
 CREATE TABLE jc_student_order
 (
     student_order_id SERIAL,
+    student_order_status int not null,
+    student_order_date timestamp not null,
 
     h_sur_name varchar(100) not null,
     h_given_name varchar(100) not null,
