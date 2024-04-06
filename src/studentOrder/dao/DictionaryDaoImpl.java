@@ -28,7 +28,7 @@ public class DictionaryDaoImpl implements DictionaryDao{
         return con;
     }
 
-    public List<Street> findStreet(String pattern) throws DaoException {
+    public List<Street> findStreets(String pattern) throws DaoException {
         List<Street> result = new LinkedList<>();
         try(Connection con = getConnection()){
 
