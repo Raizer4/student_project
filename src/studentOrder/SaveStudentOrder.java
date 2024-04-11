@@ -7,6 +7,7 @@ import studentOrder.domain.*;
 
 import java.sql.*;
 import java.time.LocalDate;
+import java.util.LinkedList;
 import java.util.List;
 
 public class SaveStudentOrder {
@@ -51,11 +52,17 @@ public class SaveStudentOrder {
         }
         */
 
-        StudentOrder s = buildStudentOrder(10);
-
+        //StudentOrder s = buildStudentOrder(10);
         StudentOrderDao dao = new StudentDaoImpl();
-        Long id = dao.saveStudentOrder(s);
-        System.out.println(id);
+        //Long id = dao.saveStudentOrder(s);
+        //System.out.println(id);
+
+        List<StudentOrder> solist = dao.getStudentOrders();
+
+        for (StudentOrder so : solist){
+            System.out.println(so.getStudentOrderId());
+        }
+
     }
 
     static long saveStudentOrder(StudentOrder studentOrder){
