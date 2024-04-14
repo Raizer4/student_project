@@ -1,13 +1,10 @@
 package studentOrder;
 
-import studentOrder.dao.DictionaryDaoImpl;
 import studentOrder.dao.StudentDaoImpl;
 import studentOrder.dao.StudentOrderDao;
 import studentOrder.domain.*;
 
-import java.sql.*;
 import java.time.LocalDate;
-import java.util.LinkedList;
 import java.util.List;
 
 public class SaveStudentOrder {

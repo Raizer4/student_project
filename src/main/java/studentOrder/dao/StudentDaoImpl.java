@@ -202,7 +202,7 @@ public class StudentDaoImpl implements StudentOrderDao
             Map<Long, StudentOrder> maps = new HashMap<>();
 
             int limit = Integer.parseInt(Config.getProperty(Config.DB_LIMIT));
-            stmt.setInt(1,StudentOrderStatus.START.ordinal());
+            stmt.setInt(1, StudentOrderStatus.START.ordinal());
             stmt.setInt(2,limit);
             ResultSet rs = stmt.executeQuery();
 
@@ -244,7 +244,7 @@ public class StudentDaoImpl implements StudentOrderDao
 
             PreparedStatement stmt = con.prepareStatement(SELECT_ORDERS);
 
-            stmt.setInt(1,StudentOrderStatus.START.ordinal());
+            stmt.setInt(1, StudentOrderStatus.START.ordinal());
             stmt.setInt(2, Integer.parseInt(Config.getProperty(Config.DB_LIMIT)));
 
             ResultSet rs = stmt.executeQuery();
